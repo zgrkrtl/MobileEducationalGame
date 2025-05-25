@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewLevelData", menuName = "Level/LevelData")]
 public class LevelData : ScriptableObject
 {
-    public ElementData[] elementsInLevel;
+    public List<ElementData> elementsInLevel;
 }

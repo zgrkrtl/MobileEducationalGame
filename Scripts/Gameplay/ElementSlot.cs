@@ -10,15 +10,15 @@ public class ElementSlot : MonoBehaviour, IDropHandler
     private RectTransform rectTransform;
     public bool isEmpty = true;
 
-    private ElementInstance currenteElementInstance;
+    private ElementInstance currentElementInstance;
     public ElementInstance ElementInstance
     {
-        get => currenteElementInstance;
+        get => currentElementInstance;
         set
         {
-            currenteElementInstance = value;
+            currentElementInstance = value;
 
-            if (currenteElementInstance == null)
+            if (currentElementInstance == null)
                 OnElementCleared?.Invoke(this);
         }
     }
@@ -39,11 +39,11 @@ public class ElementSlot : MonoBehaviour, IDropHandler
             if (instance.CurrentSlot != null)
             {
                 instance.CurrentSlot.isEmpty = true;
-                instance.CurrentSlot.currenteElementInstance = null;
+                instance.CurrentSlot.currentElementInstance = null;
             }
 
             instance.CurrentSlot = this;
-            currenteElementInstance = instance;
+            currentElementInstance = instance;
 
             Transform droppedTransform = instance.transform;
             droppedTransform.SetParent(transform);
@@ -60,12 +60,12 @@ public class ElementSlot : MonoBehaviour, IDropHandler
 
     public void SetElementPosition(ElementInstance elementInstance)
     {
-        currenteElementInstance = elementInstance;
-        currenteElementInstance.CurrentSlot = this;
+        currentElementInstance = elementInstance;
+        currentElementInstance.CurrentSlot = this;
 
-        currenteElementInstance.transform.SetParent(transform);
+        currentElementInstance.transform.SetParent(transform);
 
-        RectTransform instanceRect = currenteElementInstance.GetComponent<RectTransform>();
+        RectTransform instanceRect = currentElementInstance.GetComponent<RectTransform>();
         instanceRect.anchoredPosition = Vector2.zero;
         
         isEmpty = false;
@@ -73,7 +73,11 @@ public class ElementSlot : MonoBehaviour, IDropHandler
     
     public void ClearSlot()
     {
+        if (currentElementInstance != null)
+        {
+            Destroy(currentElementInstance.gameObject);
+        }
         ElementInstance = null;
-    }
+        isEmpty = true;    }
 
 }
