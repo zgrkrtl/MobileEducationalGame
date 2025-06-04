@@ -1,4 +1,4 @@
 # MobileEducational
 
 ## Screenshots
-![Gameplay Screenshot](Screenshots/Gameplay.jpeg)
+![Gameplay Screenshot](Screenshots/gameplay.jpeg)
