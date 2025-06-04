@@ -34,8 +34,10 @@
 ---
 
 
-## Here is the preview of gameplay
+## Here are some screenshots of gameplay
 
 
 ## Screenshots
 ![Gameplay Screenshot](Screenshots/gameplay.jpeg)
+![Gameplay Screenshot](Screenshots2/gameplay.jpeg)
+![Gameplay Screenshot](Screenshots3/gameplay.jpeg)
