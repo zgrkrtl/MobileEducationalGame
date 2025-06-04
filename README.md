@@ -39,5 +39,5 @@
 
 ## Screenshots
 ![Gameplay Screenshot](Screenshots/gameplay.jpeg)
-![Gameplay Screenshot](Screenshots2/gameplay.jpeg)
-![Gameplay Screenshot](Screenshots3/gameplay.jpeg)
+![Gameplay Screenshot](Screenshots/gameplay2.jpeg)
+![Gameplay Screenshot](Screenshots/gameplay3.jpeg)
